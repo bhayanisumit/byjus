@@ -1,16 +1,25 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
+import { HttpClientModule }    from '@angular/common/http';
 import { AppComponent } from './app.component';
+import { NgxSpinnerModule } from "ngx-spinner";
+import { PagerService } from './pager.service';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule,
+    NgxSpinnerModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [
+    PagerService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
